@@ -16,8 +16,10 @@ flip_booleans([]) # returns []
 
 
 def flip_booleans(bools):
-    # Your code here
-    pass
+    list=[]
+    for bool in bools:
+        list.append(not(bool))
+    return list
 
 
 def test_empty_list_returns_empty_list():

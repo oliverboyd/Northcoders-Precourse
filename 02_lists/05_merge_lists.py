@@ -11,8 +11,9 @@ merge_lists([1, 2], [3, 4]) # returns [1, 2, 3, 4]
 
 
 def merge_lists(list1, list2):
-    # your code here
-    pass
+    list3 = list1.copy()
+    list3.extend(list2)
+    return list3
 
 
 def test_returns_two_single_elements_merged():

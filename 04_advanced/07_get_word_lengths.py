@@ -17,8 +17,11 @@ get_word_lengths('') # returns []
 
 
 def get_word_lengths(string):
-    # Your code here
-    pass
+    length_list=[]
+    word_list = string.split()
+    for word in word_list:
+        length_list.append(len(word))
+    return length_list
 
 
 def test_empty_string():

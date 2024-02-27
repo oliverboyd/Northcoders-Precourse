@@ -46,8 +46,11 @@ tally_people_in_manchester([]) # returns 0
 
 
 def tally_people_in_manchester(people):
-    # Your code here
-    pass
+    tally = 0
+    for person in people:
+        if person["lives"]["city"].lower() == "manchester":
+            tally += 1
+    return tally
 
 
 def test_empty_list():

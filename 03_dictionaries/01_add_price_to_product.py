@@ -13,8 +13,11 @@ add_price_to_product({ 'type': 'Tofu slices' }, 2.20) # returns
 
 
 def add_price_to_product(product, price):
-    # Your code here
-    pass
+    if product:
+        product["price"] = price
+        return product
+    else:
+        return {}
 
 
 def test_empty_product_produces_no_output():

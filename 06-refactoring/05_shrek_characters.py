@@ -9,12 +9,7 @@ If you run pytest on this file, all tests should pass.
 
 
 def shrek_characters(characters):
-    shreks = []
-    for character in characters:
-        if 'Shrek' in character['movie']:
-            shreks.append(character['name'])
-    return shreks
-
+    return [character["name"] for character in characters if "Shrek" in character["movie"]]
 
 # Do not change any code below this line
 

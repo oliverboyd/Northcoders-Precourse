@@ -31,8 +31,15 @@ with any keys that contain lists pluralised (an 's' added to the end.)
 
 
 def pluralise_keys(dictionary):
-    # Your code here
-    pass
+    dict2 = dictionary.copy()
+    for key in dictionary:
+        if isinstance(dictionary[key], list):
+            newstring = str(key) + "s"
+            dict2[newstring] = dictionary[key]
+            dict2.pop(key)
+    return dict2
+
+
 
 
 def test_empty_dictionary():

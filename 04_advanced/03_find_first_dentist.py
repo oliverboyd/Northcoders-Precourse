@@ -20,8 +20,10 @@ find_first_dentist([{'name': 'Callum', 'is_dentist': True},
 
 
 def find_first_dentist(people):
-    # Your code here
-    pass
+    for person in people:
+        if person["is_dentist"] == True:
+            return person
+    return None
 
 
 def test_empty_list_returns_none():

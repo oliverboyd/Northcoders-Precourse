@@ -8,7 +8,7 @@ Can you work out what needs changing to make the function pass all the tests?
 """
 
 
-def split_string():
+def split_string(str):
     return list(str)
 
 

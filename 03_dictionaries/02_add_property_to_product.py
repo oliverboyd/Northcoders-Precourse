@@ -20,11 +20,12 @@ add_property_to_product(
     # 'length': '2h 36m'
     # }
 """
-
+import typing
 
 def add_property_to_product(product, property, value):
-    # Your code here
-    pass
+    if isinstance(property, typing.Hashable):
+        product[property] = value
+    return product
 
 
 def test_empty_product_gains_single_property():

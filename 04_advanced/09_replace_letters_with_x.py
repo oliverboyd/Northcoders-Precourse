@@ -18,8 +18,17 @@ replace_letters_with_x('Do you like coding?') # returns 'XX XXX XXXX XXXXXX?'
 
 
 def replace_letters_with_x(string):
-    # Your code here
-    pass
+    xstring=""
+    for char in string:
+        if char.isalpha():
+            xstring += "X"
+        else: 
+            xstring += char
+    return xstring
+
+
+
+
 
 
 def test_empty_string():

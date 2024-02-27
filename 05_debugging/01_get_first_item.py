@@ -10,7 +10,7 @@ tests?
 
 def get_first_item(my_list):
     first_item = my_list[0]
-    return firstitem
+    return first_item
 
 
 # Do not change code below this line

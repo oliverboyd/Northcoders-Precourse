@@ -10,10 +10,10 @@ Can you work out what needs changing to make the function pass all the tests?
 
 def count_the_chars(character_list, character):
     count = 0
-    for i in range(character_list):
-        if character_list[i] = character:
-            count + 1
-            return count
+    for i in range(0,len(character_list)):
+        if character_list[i] == character:
+            count += 1
+    return count
         
 
 # Do not change code below this line

@@ -10,9 +10,9 @@ remove_item([3], 0) # returns []
 
 
 def remove_item(items, n):
-    # your code here
-    pass
-
+    newlist = items.copy()
+    newlist.pop(n)
+    return newlist
 
 def test_returns_a_list_without_the_specified_element():
     return_value = remove_item([1], 0)

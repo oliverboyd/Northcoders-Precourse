@@ -18,8 +18,14 @@ generate_matrix(3) # returns [
 
 
 def generate_matrix(number):
-    # Your code here
-    pass
+    matrix = []
+    for i in range(0,number):
+        vector = []
+        for j in range(0,number):
+            vector.append(None)
+        matrix.append(vector)
+    return matrix
+
 
 
 def test_zero_generates_empty_list():

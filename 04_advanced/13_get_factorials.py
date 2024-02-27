@@ -19,8 +19,15 @@ get_factorials([]) # returns []
 
 
 def get_factorials(numbers):
-    # Your code here
-    pass
+    def fact(n):
+        if n == 0:
+            return 1
+        else:
+            return n*fact(n-1)
+    list=[]
+    for number in numbers:
+        list.append(fact(number))
+    return list
 
 
 def test_empty_list_generates_empty_list():

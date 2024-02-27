@@ -32,8 +32,13 @@ get_user_pet_age(user) # returns 4
 
 
 def get_user_pet_age(user):
-    # Your code here
-    pass
+    if "pet" in user:
+        x = user["pet"]
+        if "age" in x:
+            return user["pet"]["age"]
+        else: return None
+    else: return None
+    
 
 
 def test_gets_pet_age():

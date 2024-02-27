@@ -19,8 +19,11 @@ get_williams(['William David', 'Cole Williamson']) # returns []
 
 
 def get_williams(names):
-    # Your code here
-    pass
+    list = []
+    for name in names:
+        if name.split()[-1].upper() == "WILLIAMS":
+            list.append(name)
+    return list
 
 
 def test_empty_list():

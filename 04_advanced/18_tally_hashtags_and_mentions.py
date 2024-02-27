@@ -14,9 +14,16 @@ tally_hashtags_and_mentions(tweet) # returns {'hashtags': 2, 'mentions': 1}
 
 
 def tally_hashtags_and_mentions(tweet):
-    # Your code here
-    pass
-
+    token_list = tweet.split()
+    hashtags=0
+    mentions=0
+    for token in token_list:
+        if token[0] == "#":
+            hashtags += 1
+        elif token[0] == "@":
+            mentions += 1
+    dictionary = {"hashtags": hashtags, "mentions": mentions}
+    return dictionary
 
 def test_empty_tweet():
     assert tally_hashtags_and_mentions('') == {'hashtags': 0, 'mentions': 0}

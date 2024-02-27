@@ -16,8 +16,12 @@ get_palindromes([]) # returns []
 
 
 def get_palindromes(words):
-    # Your code here
-    pass
+    palindromes = []
+    for word in words:
+        if word[::-1] == word:
+            palindromes.append(word)
+    return palindromes
+
 
 
 def test_empty_list():

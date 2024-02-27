@@ -7,8 +7,12 @@ get_even_nums([1, 2, 3]) # returns [2]
 
 
 def get_even_nums(nums):
-    # your code here
-    pass
+    array = []
+    for num in nums:
+        if num % 2 == 0:
+            array.append(num)
+    return array
+
 
 
 def test_returns_an_empty_list_for_no_numbers():

@@ -13,8 +13,8 @@ Can you work out what needs changing to make the function pass all the tests?
 
 
 def add_bread(person, loaf):
-    person['loaf'] == loaf
-    return
+    person['fave_bread'] = loaf
+    return person
 
 
 # Do not change code below this line

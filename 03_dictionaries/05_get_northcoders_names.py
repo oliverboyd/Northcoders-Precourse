@@ -22,8 +22,11 @@ get_northcoders_names(northcoders) # returns ['Callum', 'Carrie']
 
 
 def get_northcoders_names(northcoders):
-    # Your code here
-    pass
+    array = []
+    for users in northcoders:
+        if "name" in users and users["name"] != "":
+            array.append(users["name"])
+    return array
 
 
 def test_returns_empty_list_if_input_empty():

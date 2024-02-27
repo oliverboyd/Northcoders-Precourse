@@ -44,8 +44,7 @@ print(voter) # will log:
 
 
 def update_voter_address(voter, correct_house_number):
-    # Your code here
-    pass
+    voter["address"]["house_number"] = correct_house_number
 
 
 def test_updates_address():

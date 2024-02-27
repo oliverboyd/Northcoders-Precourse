@@ -8,13 +8,8 @@ Refactor `shout_names` to use a list comprehension.
 If you run pytest on this file, all tests should pass.
 """
 
-
 def shout_names(names):
-    shouted_names = []
-    for name in names:
-        shouted_names.append(name.upper() + '!')
-    return shouted_names
-
+    return [name.upper() + "!" for name in names]
 
 # Do not change any code below this line
 

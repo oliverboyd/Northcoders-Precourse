@@ -21,8 +21,14 @@ returns
 
 
 def create_northcoder(name, year_of_birth):
-    # Your code here
-    pass
+    dict = {}
+    dict["name"] = name
+    if year_of_birth <= 2023:
+        dict["age"] = 2023-year_of_birth
+    else:
+        dict["age"] = "error"
+    dict["language"] = "Python"
+    return dict
 
 
 def test_creates_northcoder_with_correct_age():

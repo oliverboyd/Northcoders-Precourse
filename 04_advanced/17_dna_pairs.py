@@ -22,8 +22,18 @@ dna_pairs('gat') # returns ['GC', 'AT', 'TA']
 
 
 def dna_pairs(dna_string):
-    # Your code here
-    pass
+    list = []
+    for letter in dna_string:
+        if letter.upper() == "G":
+            list.append("GC")
+        elif letter.upper() == "C":
+            list.append("CG")
+        elif letter.upper() == "T":
+            list.append("TA")
+        elif letter.upper() == "A":
+            list.append("AT")
+    return list
+
 
 
 def test_empty_string_produces_empty_list():

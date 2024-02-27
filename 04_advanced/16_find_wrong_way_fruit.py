@@ -27,8 +27,13 @@ one is the right way round with less than 3 pieces of fruit
 
 
 def find_wrong_way_fruit(orchard):
-    # Your code here
-    pass
+    if len(orchard) <= 2:
+        return 0
+    elif orchard.count(orchard[0]) == 1:
+        return 0
+    for i in range(1,len(orchard)):
+        if orchard[i] != orchard[0]:
+            return i
 
 
 def test_returns_zero_for_singleton_list():

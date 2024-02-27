@@ -24,8 +24,10 @@ Returns
 
 
 def delete_many_passwords(users):
-    # Your code here
-    pass
+    for user in users:
+        if "password" in user:
+            user.pop("password")
+    return users
 
 
 def test_changes_single_dict():

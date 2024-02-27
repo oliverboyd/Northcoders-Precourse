@@ -31,9 +31,9 @@ def add_guests_to_party(invitees):
         ]
     }
     for invitee in invitees:
-        if invitee['RSVP']:
-            party.append({'name': invitee['nome']})
-    return party
+        if invitee['RSVP'].upper() == 'YES':
+            party['guests'].append({'name': invitee['name']})
+    return party['guests']
 
 
 # Do not change code below this line

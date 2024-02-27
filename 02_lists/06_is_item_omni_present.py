@@ -16,8 +16,10 @@ present in two lists
 
 
 def is_item_omnipresent(lists, item):
-    # your code here
-    pass
+    for list in lists:
+        if item not in list:
+            return False
+    return True
 
 
 def test_returns_false_if_item_missing_from_all():

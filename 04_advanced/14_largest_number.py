@@ -14,7 +14,13 @@ largest_number(43) # returns 43
 
 
 def largest_number(number):
-    pass
+    list=[]
+    for char in str(number):
+        list.append(int(char))
+    list.sort(reverse = True)
+    largest = int("".join(str(x) for x in list))
+    return largest
+    
 
 
 def test_single_digit():

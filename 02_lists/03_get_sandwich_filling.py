@@ -15,9 +15,9 @@ get_sandwich_filling(['a', 'b', 'c', 'd']) # returns ['b', 'c']
 
 
 def get_sandwich_filling(sandwich):
-    # your code here
-    pass
-
+    sandwich.pop()
+    x = sandwich[1:]
+    return x
 
 def test_returns_a_list_with_a_single_filling():
     cheese_sandwich = ['bread', 'lonely slice of cheese', 'bread']

@@ -31,8 +31,13 @@ translate_key(student, 'prénom', 'first_name') # should return the following:
 
 
 def translate_key(student, key_to_change, translation):
-    # Your code here
-    pass
+    student2 = student.copy()
+    if key_to_change in student:
+        student2[translation] = student[key_to_change]
+        student2.pop(key_to_change)
+        return student2
+    else: return student2
+
 
 
 def test_return_copy_of_empty_data_unchanged():
